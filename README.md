@@ -38,6 +38,71 @@ This covers all of my reasoning, assumptions, and work. You can see in the attac
 
 1. [Golang](code_samples/go/main.go)
 
+```go
+package main
+
+import "fmt"
+
+func main() {
+	for i := 1; i <= 100; i++ {
+		if i%3 != 0 && i%5 != 0 {
+			fmt.Printf("%d", i)
+		} else if i%3 == 0 && i%5 == 0 {
+			fmt.Printf("FizzBuzz")
+		} else if i%3 == 0 {
+			fmt.Printf("Fizz")
+		} else if i%5 == 0 {
+			fmt.Printf("Buzz")
+		} else {
+			fmt.Printf("Houston, we have a problem. This isn't a number.")
+			break
+		}
+		fmt.Printf("\n")
+	}
+}
+```
+
 2. [Python](code_samples/python/fizzbuzz.py)
 
+```python
+def main():
+    for i in range(1, 101):
+        if i % 3 != 0 and i % 5 != 0:
+            print (str(i))
+        elif i % 3 == 0 and i % 5 == 0:
+            print ('FizzBuzz')
+        elif i % 3 == 0:
+            print ('Fizz')
+        elif i % 5 == 0:
+            print ('Buzz')
+        else:
+            print ('Houston, we have a problem. This is not a number.')
+            break
+main()
+```
+
 3. [JS/Node.js](code_samples/nodejs/fizzbuzz.js)
+
+```js
+function main() {
+    for (var i = 1; i<=100; i++) {
+    if (i % 3 !== 0 && i % 5 !== 0) {
+        console.log(i);
+    }
+    else if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');
+    }
+    else if (i % 3 === 0) {
+        console.log('Fizz');
+    }
+    else if (i % 5 === 0) {
+        console.log('Buzz');
+    } 
+    else {
+        console.log('Houston, we have a problem. This is not a number.');
+        break;
+    }
+    }
+}
+main()
+```
